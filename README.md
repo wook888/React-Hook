@@ -1,10 +1,12 @@
-# React-Hook
-
 # 2주차 스터디!
 
-# 😃 React Hook
+깃허브주소
 
-함수형 컴포넌트에서도 클래스형 컴포넌트의 기능을 사용할 수 있게 하는 기능이다.
+https://github.com/wook888/React-Hook
+
+# 😃 [React Hook](https://ko.legacy.reactjs.org/docs/hooks-intro.html) (공식문서 link)
+
+React Hook은? 함수형 컴포넌트에서도 클래스형 컴포넌트의 기능을 사용할 수 있게 하는 기능이다.
 
 훅을 통해 함수형 컴포넌트에서도 컴포넌트 상태 값을 관리할 수 있고, 컴포넌트의 생명주기 함수를 이용할 수있다.
 
@@ -16,11 +18,13 @@
 2. 리액트 내장 훅과 다른 사람들이 만든 여러 커스텀 훅을 조립해서 새로운 훅을 만들 수 있다.
 3. 같은 로직을 한곳으로 모을 수 있어 가독성이 좋다.
 
-## 기본 Hook
+## 기본 Hook 3가지 link
 
-- useState
-- useEffect
-- useContext
+- [useState](https://ko.legacy.reactjs.org/docs/hooks-reference.html#usestate)
+- [useEffect](https://ko.legacy.reactjs.org/docs/hooks-reference.html#useeffect)
+- [useContext](https://ko.legacy.reactjs.org/docs/hooks-reference.html#usecontext)
+
+출처- React 공식문서
 
 > useState
 
@@ -42,7 +46,7 @@ function MyComponent() {
 }
 ```
 
-useState Hook 코드별 해석
+> useState Hook 코드별 해석
 
 - **`import React, { useState } from 'react';`**: React와 useState Hook을 옴.
 - **`function MyComponent() { ... }`**: MyComponent라는 함수형 컴포넌트를 정의합니다.
@@ -52,7 +56,7 @@ useState Hook 코드별 해석
 
 > useEffect
 
-컴포넌트의 생명주기(lifecycle)와 관련하여 특정 작업을 수행하고자 할 때 사용됩니다. 함수형 컴포넌트에서 **`useEffect`**를 사용하여 부수 효과(side effect)를 수행하거나 컴포넌트의 업데이트 사이클 이벤트에 대한 작업을 정의할 수 있습니다.
+상태가 업데이트 되었을때, 부수적인 효과들을 적용할 함수를 인자로 받는 훅입니다.
 
 ```jsx
 import React, { useEffect } from "react";
@@ -67,7 +71,7 @@ function MyComponent() {
 }
 ```
 
-useEffect 코드별 해석
+> useEffect 코드별 해석
 
 - **`import React, { useEffect } from 'react';`**: React와 **`useEffect`** Hook을 가져옵니다.
 - **`function MyComponent() { ... }`**: MyComponent라는 함수형 컴포넌트를 정의합니다.
@@ -77,7 +81,7 @@ useEffect 코드별 해석
 
 > useContext
 
-React의 Hook 중 하나로, React 컨텍스트(Context)를 사용할 때 사용됩니다. 컨텍스트를 통해 컴포넌트 간에 전역적으로 상태를 공유하고 데이터를 전달할 수 있습니다.
+전역에서 사용할 수 있는 컨텍스트를 가져오는 훅입니다. 여러 개의 컴포넌트를 오가는 데이터를 단순히 props만으로 전달하는건 관리하기에 좋지 않습니다. 이러한 데이터를 전역에서 관리 할 수 있도록 하는 개념이 바로 컨텍스트입니다.
 
 ```jsx
 import React, { useContext } from "react";
@@ -93,6 +97,8 @@ function MyComponent() {
 }
 ```
 
+> useContext 코드별 해석
+
 - **`import React, { useContext } from 'react';`**: React와 **`useContext`** Hook을 가져옵니다.
 - **`const MyContext = React.createContext();`**: **`createContext`** 함수를 사용하여 새로운 컨텍스트인 **`MyContext`**를 생성합니다.
 - **`function MyComponent() { ... }`**: MyComponent라는 함수형 컴포넌트를 정의합니다.
@@ -100,6 +106,21 @@ function MyComponent() {
 - **`return <div>{value}</div>;`**: 화면에 **`value`** 변수에 저장된 값을 표시하는 간단한 JSX를 반환합니다.
 
 **`useContext`**는 주로 컴포넌트 계층 구조를 따라 상태를 전파하고 여러 컴포넌트에서 동일한 값을 공유해야 할 때 사용됩니다. 예를 들어, 사용자 인증 정보, 애플리케이션 설정 또는 테마와 같은 전역적으로 공유되어야 하는 데이터를 처리하는 데에 유용합니다.
+
+## ++ 추가 HOOK 10가지 link
+
+- [useReducer](https://ko.legacy.reactjs.org/docs/hooks-reference.html#usereducer)
+- [useCallback](https://ko.legacy.reactjs.org/docs/hooks-reference.html#usecallback)
+- [useMemo](https://ko.legacy.reactjs.org/docs/hooks-reference.html#usememo)
+- [useRef](https://ko.legacy.reactjs.org/docs/hooks-reference.html#useref)
+- [useImperativeHandle](https://ko.legacy.reactjs.org/docs/hooks-reference.html#useimperativehandle)
+- [useLayoutEffect](https://ko.legacy.reactjs.org/docs/hooks-reference.html#uselayouteffect)
+- [useDebugValue](https://ko.legacy.reactjs.org/docs/hooks-reference.html#usedebugvalue)
+- [useDeferredValue](https://ko.legacy.reactjs.org/docs/hooks-reference.html#usedeferredvalue)
+- [useTransition](https://ko.legacy.reactjs.org/docs/hooks-reference.html#usetransition)
+- [useId](https://ko.legacy.reactjs.org/docs/hooks-reference.html#useid)
+
+출처 - React 공식문서
 
 ---
 
