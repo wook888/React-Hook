@@ -1,9 +1,5 @@
 # 2주차 스터디!
 
-깃허브주소
-
-https://github.com/wook888/React-Hook
-
 # 😃 [React Hook](https://ko.legacy.reactjs.org/docs/hooks-intro.html) (공식문서 link)
 
 React Hook은? 함수형 컴포넌트에서도 클래스형 컴포넌트의 기능을 사용할 수 있게 하는 기능이다.
